@@ -2,14 +2,34 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>custom-element demo</title>
+    <title>tree-view demo</title>
   </head>
   <body>
-    <custom-element></custom-element>
+    <json-view>
+      <script type="application/json">
+        {
+          "a": {
+            "b": {
+              "c": [1,2,3]
+            },
+            "d": {
+              "e": [4,5,6]
+            },
+            "g": [
+              {"one": 1},
+              {"two": 2}
+            ],
+            "f": "hello world",
+            "null": null,
+            "bool": true
+          }
+        }
+      </script>
+    </json-view>
 
     <script type="module">
-      // import 'https://unpkg.com/@github/custom-element-boilerplate@latest/dist/custom-element.js'
-      import '../src/custom-element.ts'
+      // import 'https://unpkg.com/@github/tree-view-boilerplate@latest/dist/tree-view.js'
+      import '../src/json-view-element.ts'
     </script>
   </body>
 </html>
